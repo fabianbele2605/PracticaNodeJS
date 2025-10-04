@@ -57,9 +57,16 @@ La ruta está dividida en niveles: Novato → Intermedio → Avanzado → Pro.
   - Manejo de errores async/await
 - **Aprendiste:** Modelos con Mongoose, middleware pre('save'), controladores, rutas, testing con Postman
 
-### 📌 Proyecto 8: Sistema de Autenticación JWT
-- Usuarios con login seguro, tokens y rutas protegidas.
-- Aprendes: seguridad en Node.
+### ✅ Proyecto 8: Sistema de Autenticación JWT - COMPLETADO
+- **Implementado:** Sistema completo de autenticación con JWT
+- **Funcionalidades:**
+  - Login genera tokens JWT con expiración
+  - Middleware de autenticación para rutas protegidas
+  - Ruta de perfil personalizada
+  - Headers Authorization con Bearer tokens
+- **Tecnologías:** JWT, middleware personalizado, headers HTTP
+- **Rutas protegidas:** GET /usuarios, GET /usuarios/perfil
+- **Aprendiste:** Tokens JWT, middleware de autenticación, seguridad en APIs, headers Authorization
 
 ---
 
@@ -109,7 +116,13 @@ Al terminar, tendrás un portafolio sólido de Node.js listo para mostrar.
   - Base de datos MongoDB local
   - Testing con Postman
 
+- ✅ **Proyecto 8:** Sistema de Autenticación JWT (Octubre 2025)
+  - Tokens JWT con expiración
+  - Middleware de autenticación
+  - Rutas protegidas
+  - Headers Authorization
+
 **Próximo Proyecto:**
-- 🔄 **Proyecto 8:** Sistema de Autenticación JWT
+- 🔄 **Proyecto 9:** Chat en Tiempo Real con Socket.io
 
 ---
