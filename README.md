@@ -1,91 +1,153 @@
-# 🚀 Curso Práctico de Node.js con Proyectos (De Novato a Pro)
+# 🟡 Nivel 2 – Principiante Intermedio (Servidores y APIs) - COMPLETADO ✅
 
-Este curso está diseñado para **aprender Node.js desde cero hasta nivel avanzado** mediante **proyectos prácticos**.  
-La ruta está dividida en niveles: Novato → Intermedio → Avanzado → Pro.  
+**Objetivo:** Crear y consumir servidores con Node.js
 
----
-
-## 🟢 Nivel 1 – Novato (Bases de Node.js)
-**Objetivo:** Entender qué es Node, cómo ejecutar código fuera del navegador y trabajar con la terminal.
-
-### 📌 Proyecto 1: Hola Node y CLI
-- Script que recibe tu nombre y te saluda.
-- Aprendes: `node archivo.js`, `process.argv`.
-
-### 📌 Proyecto 2: Gestor de Tareas en Consola
-- CRUD de tareas (agregar, listar, completar, eliminar).
-- Aprendes: módulos (`fs`, `module.exports`), persistencia en JSON, `npm init`.
-
-### 📌 Proyecto 3: Mini Calculadora en Consola
-- Operaciones básicas (+, -, *, /).
-- Aprendes: funciones y argumentos en CLI.
+Este nivel se enfoca en el desarrollo de servidores web, APIs REST y el consumo de servicios externos. Aquí aprendes a crear aplicaciones que pueden comunicarse a través de HTTP.
 
 ---
 
-## 🟡 Nivel 2 – Principiante Intermedio (Servidores y APIs)
-**Objetivo:** Crear y consumir servidores con Node.
+## 📌 Proyecto 4: Servidor HTTP Básico ✅
 
-### 📌 Proyecto 4: Servidor HTTP Básico
-- Usando el módulo `http`, responde “Hola Mundo” en el navegador.
-- Aprendes: ciclo request-response.
+**Objetivo:** Usando el módulo `http`, responde "Hola Mundo" en el navegador.
+**Aprendes:** Ciclo request-response.
 
-### 📌 Proyecto 5: API REST con Express
-- CRUD de tareas pero ahora vía API (endpoints).
-- Aprendes: `express`, middlewares, rutas.
+### 🛠️ Tecnologías utilizadas:
+- Módulo `http` nativo de Node.js
+- Headers HTTP
+- Content-Type
 
-### 📌 Proyecto 6: App del Clima
-- Introduces una ciudad y el programa consulta una API externa de clima.
-- Aprendes: `axios` o `fetch`, manejo de promesas y APIs externas.
+### 🚀 Cómo ejecutar:
+```bash
+cd Proyecto4-servidor-basico
+node servidor.js
+```
+Visita: `http://localhost:3000`
 
----
-
-## 🟠 Nivel 3 – Intermedio (Base de Datos y Autenticación)
-**Objetivo:** Guardar y proteger datos reales.
-
-### 📌 Proyecto 7: API de Usuarios con MongoDB o MySQL
-- Endpoints para registro, login y listar usuarios.
-- Aprendes: bases de datos + Node (`mongoose` o `sequelize`).
-
-### 📌 Proyecto 8: Sistema de Autenticación JWT
-- Usuarios con login seguro, tokens y rutas protegidas.
-- Aprendes: seguridad en Node.
+### 📚 Conceptos aprendidos:
+- ✅ `http.createServer()` para crear servidores
+- ✅ Objetos `req` (request) y `res` (response)
+- ✅ `res.writeHead()` para configurar headers
+- ✅ `res.end()` para enviar respuestas
+- ✅ Ciclo completo request-response
+- ✅ Servir contenido HTML dinámico
 
 ---
 
-## 🔴 Nivel 4 – Avanzado (Tiempo Real y Escalabilidad)
-**Objetivo:** Manejar conexiones persistentes y eventos en vivo.
+## 📌 Proyecto 5: API REST con Express ✅
 
-### 📌 Proyecto 9: Chat en Tiempo Real con Socket.io
-- Usuarios chatean desde navegador.
-- Aprendes: WebSockets, eventos.
+**Objetivo:** CRUD de tareas pero ahora vía API (endpoints).
+**Aprendes:** Express, middlewares, rutas.
 
-### 📌 Proyecto 10: Notificaciones en Tiempo Real
-- Ejemplo: app que avisa cuando hay un nuevo pedido.
-- Aprendes: pub/sub, push notifications.
+### 🛠️ Tecnologías utilizadas:
+- Express.js
+- Middleware `express.json()`
+- Sistema de archivos (`fs`)
+- Rutas HTTP (GET, POST, PUT, DELETE)
+
+### 🚀 Cómo ejecutar:
+```bash
+cd Proyecto5-api-express
+npm install
+node app.js
+```
+
+### 🔗 Endpoints disponibles:
+- `GET /tareas` - Listar todas las tareas
+- `POST /tareas` - Crear nueva tarea
+- `PUT /tareas/:id` - Completar/descompletar tarea
+- `DELETE /tareas/:id` - Eliminar tarea
+
+### 📚 Conceptos aprendidos:
+- ✅ Express.js framework
+- ✅ Middlewares (`app.use()`)
+- ✅ Rutas HTTP y métodos REST
+- ✅ Parámetros de URL (`req.params`)
+- ✅ Body de requests (`req.body`)
+- ✅ Códigos de estado HTTP (200, 201, 400, 404)
+- ✅ Manejo de errores en APIs
+- ✅ Persistencia de datos en JSON
+
+---
+
+## 📌 Proyecto 6: App del Clima ✅
+
+**Objetivo:** Introduces una ciudad y el programa consulta una API externa de clima.
+**Aprendes:** `axios`, manejo de promesas y APIs externas.
+
+### 🛠️ Tecnologías utilizadas:
+- Axios para peticiones HTTP
+- OpenWeatherMap API
+- Async/Await
+- Manejo de errores con try/catch
+
+### 🚀 Cómo ejecutar:
+```bash
+cd Proyecto6-app-clima
+npm install
+node clima.js Madrid
+node clima.js "Buenos Aires"
+```
+
+### 📚 Conceptos aprendidos:
+- ✅ `axios` para peticiones HTTP externas
+- ✅ `async/await` para manejo de promesas
+- ✅ `try/catch` para manejo de errores
+- ✅ Consumo de APIs externas
+- ✅ Query parameters en URLs
+- ✅ Autenticación con API keys
+- ✅ Manejo de diferentes tipos de errores (404, 401, red)
+- ✅ Formateo y presentación de datos
 
 ---
 
-## ⚫ Nivel 5 – Pro (Fullstack y Proyectos Grandes)
-**Objetivo:** Unir todo lo aprendido y crear proyectos completos.
+## 🎯 Resumen del Nivel 2
 
-### 📌 Proyecto 11: Mini E-commerce (API + Frontend)
-- Funcionalidades: productos, usuarios, carrito, pedidos.
-- Backend en Node, frontend en React/Vue.
-- Aprendes: Node en producción + integración con frontend.
+### 🧠 Conceptos dominados:
+1. **Servidores HTTP:** Creación de servidores web básicos
+2. **Express.js:** Framework web para Node.js
+3. **APIs REST:** Diseño e implementación de endpoints
+4. **Middlewares:** Funciones intermedias en Express
+5. **HTTP Methods:** GET, POST, PUT, DELETE
+6. **Status Codes:** 200, 201, 400, 404, 500
+7. **Async/Await:** Manejo moderno de promesas
+8. **APIs Externas:** Consumo de servicios de terceros
+9. **Error Handling:** Manejo robusto de errores
 
-### 📌 Proyecto 12: Clone de Trello / Notas Colaborativas
-- Varias personas editan y ven cambios en tiempo real.
-- Aprendes: Node + WebSockets + escalabilidad de apps grandes.
+### 📁 Estructura del nivel:
+```
+PracticaNodeJS/
+├── Proyecto4-servidor-basico/
+│   ├── servidor.js
+│   └── package.json
+├── Proyecto5-api-express/
+│   ├── app.js
+│   ├── tareas.json
+│   ├── package.json
+│   └── node_modules/
+└── Proyecto6-app-clima/
+    ├── clima.js
+    ├── package.json
+    └── node_modules/
+```
+
+### 🚀 Habilidades adquiridas:
+- ✅ Crear servidores web desde cero
+- ✅ Desarrollar APIs REST completas
+- ✅ Consumir APIs externas
+- ✅ Manejar peticiones HTTP
+- ✅ Implementar CRUD operations
+- ✅ Gestionar errores de red y APIs
+- ✅ Trabajar con promesas y async/await
 
 ---
 
-## ✅ Conclusión
-- **Nivel 1 y 2 →** Dominas lo básico de Node y APIs.  
-- **Nivel 3 →** Manejas datos y seguridad.  
-- **Nivel 4 →** Controlas tiempo real.  
-- **Nivel 5 →** Creas proyectos como los que se hacen en empresas.  
+## 🎊 Estado: NIVEL 2 COMPLETADO EXITOSAMENTE
 
-Este curso es **100% práctico**: cada proyecto te da una habilidad nueva.  
-Al terminar, tendrás un portafolio sólido de Node.js listo para mostrar.
+**Proyectos completados:** 3/3 ✅
+**Conceptos dominados:** Servidores, APIs REST, Consumo de APIs externas
+**Próximo nivel:** Nivel 3 - Intermedio (Base de Datos y Autenticación)
 
 ---
+
+**Fecha de finalización:** [Fecha actual]
+**Tiempo invertido:** [Sesión de aprendizaje]
