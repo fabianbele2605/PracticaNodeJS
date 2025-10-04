@@ -1,0 +1,12 @@
+{
+  "name": "practicanodejs",
+  "version": "1.0.0",
+  "description": "Este curso está diseñado para **aprender Node.js desde cero hasta nivel avanzado** mediante **proyectos prácticos**.   La ruta está dividida en niveles: Novato → Intermedio → Avanzado → Pro.",
+  "main": "hola.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
