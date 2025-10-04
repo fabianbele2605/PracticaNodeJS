@@ -1,91 +1,146 @@
-# 🚀 Curso Práctico de Node.js con Proyectos (De Novato a Pro)
+# 🟢 Nivel 1 – Novato (Bases de Node.js) - COMPLETADO ✅
 
-Este curso está diseñado para **aprender Node.js desde cero hasta nivel avanzado** mediante **proyectos prácticos**.  
-La ruta está dividida en niveles: Novato → Intermedio → Avanzado → Pro.  
-
----
-
-## 🟢 Nivel 1 – Novato (Bases de Node.js)
 **Objetivo:** Entender qué es Node, cómo ejecutar código fuera del navegador y trabajar con la terminal.
 
-### 📌 Proyecto 1: Hola Node y CLI
-- Script que recibe tu nombre y te saluda.
-- Aprendes: `node archivo.js`, `process.argv`.
+---
 
-### 📌 Proyecto 2: Gestor de Tareas en Consola
-- CRUD de tareas (agregar, listar, completar, eliminar).
-- Aprendes: módulos (`fs`, `module.exports`), persistencia en JSON, `npm init`.
+## 📌 Proyecto 1: Hola Node y CLI ✅
 
-### 📌 Proyecto 3: Mini Calculadora en Consola
-- Operaciones básicas (+, -, *, /).
-- Aprendes: funciones y argumentos en CLI.
+**Objetivo:** Script que recibe tu nombre y te saluda.
+
+### Lo que aprendiste:
+- ✅ `node archivo.js` - Ejecutar archivos JavaScript con Node
+- ✅ `process.argv` - Acceder a argumentos de línea de comandos
+
+### Código implementado:
+```javascript
+const nombre = process.argv[2];
+
+if (nombre) {
+    console.log(`Hola ${nombre}! Bienvenido a Node.js ⚡`);
+} else {
+    console.log('Por favor, proporciona un nombre como argumento.');
+}
+```
+
+### Comandos de prueba:
+```bash
+node hola.js Fabian
+node hola.js
+```
 
 ---
 
-## 🟡 Nivel 2 – Principiante Intermedio (Servidores y APIs)
-**Objetivo:** Crear y consumir servidores con Node.
+## 📌 Proyecto 2: Gestor de Tareas en Consola ✅
 
-### 📌 Proyecto 4: Servidor HTTP Básico
-- Usando el módulo `http`, responde “Hola Mundo” en el navegador.
-- Aprendes: ciclo request-response.
+**Objetivo:** CRUD de tareas (agregar, listar, completar, eliminar) con persistencia en JSON.
 
-### 📌 Proyecto 5: API REST con Express
-- CRUD de tareas pero ahora vía API (endpoints).
-- Aprendes: `express`, middlewares, rutas.
+### Lo que aprendiste:
+- ✅ Módulo `fs` para leer/escribir archivos
+- ✅ `module.exports` y funciones modulares
+- ✅ Persistencia de datos en JSON
+- ✅ `npm init` para inicializar proyectos
+- ✅ Manejo avanzado de `process.argv`
 
-### 📌 Proyecto 6: App del Clima
-- Introduces una ciudad y el programa consulta una API externa de clima.
-- Aprendes: `axios` o `fetch`, manejo de promesas y APIs externas.
+### Funcionalidades implementadas:
+- ✅ Agregar tareas
+- ✅ Listar tareas con estados (completada/pendiente)
+- ✅ Completar tareas
+- ✅ Eliminar tareas
+- ✅ Persistencia en archivo JSON
+- ✅ Validación de comandos y argumentos
 
----
+### Comandos disponibles:
+```bash
+node tareas.js agregar "descripción"
+node tareas.js listar
+node tareas.js completar ID
+node tareas.js eliminar ID
+```
 
-## 🟠 Nivel 3 – Intermedio (Base de Datos y Autenticación)
-**Objetivo:** Guardar y proteger datos reales.
-
-### 📌 Proyecto 7: API de Usuarios con MongoDB o MySQL
-- Endpoints para registro, login y listar usuarios.
-- Aprendes: bases de datos + Node (`mongoose` o `sequelize`).
-
-### 📌 Proyecto 8: Sistema de Autenticación JWT
-- Usuarios con login seguro, tokens y rutas protegidas.
-- Aprendes: seguridad en Node.
-
----
-
-## 🔴 Nivel 4 – Avanzado (Tiempo Real y Escalabilidad)
-**Objetivo:** Manejar conexiones persistentes y eventos en vivo.
-
-### 📌 Proyecto 9: Chat en Tiempo Real con Socket.io
-- Usuarios chatean desde navegador.
-- Aprendes: WebSockets, eventos.
-
-### 📌 Proyecto 10: Notificaciones en Tiempo Real
-- Ejemplo: app que avisa cuando hay un nuevo pedido.
-- Aprendes: pub/sub, push notifications.
+### Estructura del proyecto:
+```
+Proyecto2-tareas/
+├── tareas.js
+├── tareas.json
+└── package.json
+```
 
 ---
 
-## ⚫ Nivel 5 – Pro (Fullstack y Proyectos Grandes)
-**Objetivo:** Unir todo lo aprendido y crear proyectos completos.
+## 📌 Proyecto 3: Mini Calculadora en Consola ✅
 
-### 📌 Proyecto 11: Mini E-commerce (API + Frontend)
-- Funcionalidades: productos, usuarios, carrito, pedidos.
-- Backend en Node, frontend en React/Vue.
-- Aprendes: Node en producción + integración con frontend.
+**Objetivo:** Operaciones básicas (+, -, *, /) con validación de errores.
 
-### 📌 Proyecto 12: Clone de Trello / Notas Colaborativas
-- Varias personas editan y ven cambios en tiempo real.
-- Aprendes: Node + WebSockets + escalabilidad de apps grandes.
+### Lo que aprendiste:
+- ✅ `parseFloat()` para convertir strings a números
+- ✅ `isNaN()` para validar números
+- ✅ `process.exit()` para terminar el programa
+- ✅ Manejo de casos especiales (división por cero)
+- ✅ Validación de entrada de datos
+
+### Operaciones implementadas:
+- ✅ Suma
+- ✅ Resta  
+- ✅ Multiplicación
+- ✅ División (con validación de división por cero)
+- ✅ Validación de argumentos
+- ✅ Mensajes de ayuda
+
+### Comandos de prueba:
+```bash
+node calculadora.js suma 10 5
+node calculadora.js resta 10 5
+node calculadora.js multiplicacion 10 5
+node calculadora.js division 10 5
+node calculadora.js division 10 0  # Prueba error
+```
 
 ---
 
-## ✅ Conclusión
-- **Nivel 1 y 2 →** Dominas lo básico de Node y APIs.  
-- **Nivel 3 →** Manejas datos y seguridad.  
-- **Nivel 4 →** Controlas tiempo real.  
-- **Nivel 5 →** Creas proyectos como los que se hacen en empresas.  
+## 🎊 Resumen del Nivel 1
 
-Este curso es **100% práctico**: cada proyecto te da una habilidad nueva.  
-Al terminar, tendrás un portafolio sólido de Node.js listo para mostrar.
+### Conceptos dominados:
+1. **Ejecución de Node.js:** `node archivo.js`
+2. **Argumentos CLI:** `process.argv`
+3. **Sistema de archivos:** `fs.readFileSync()`, `fs.writeFileSync()`
+4. **JSON:** `JSON.parse()`, `JSON.stringify()`
+5. **Validación:** `isNaN()`, validación de argumentos
+6. **Control de flujo:** `switch`, `if/else`, `process.exit()`
+7. **Gestión de proyectos:** `npm init`
+
+### Proyectos completados:
+- ✅ **Proyecto 1:** Hola Node y CLI
+- ✅ **Proyecto 2:** Gestor de Tareas en Consola  
+- ✅ **Proyecto 3:** Mini Calculadora en Consola
+
+### Estructura final del nivel:
+```
+PracticaNodeJS/
+├── hola.js
+├── Proyecto2-tareas/
+│   ├── tareas.js
+│   ├── tareas.json
+│   └── package.json
+├── Proyecto3-calculadora/
+│   └── calculadora.js
+└── docs/
+    └── nivel-1-novato.md
+```
 
 ---
+
+## 🚀 Próximo paso: Nivel 2 - Principiante Intermedio
+
+**Enfoque:** Servidores y APIs
+- Proyecto 4: Servidor HTTP Básico
+- Proyecto 5: API REST con Express  
+- Proyecto 6: App del Clima
+
+**Fecha de inicio:** [Próxima sesión]
+
+---
+
+**Estado:** ✅ NIVEL 1 COMPLETADO EXITOSAMENTE
+**Fecha de finalización:** [Fecha actual]
+**Tiempo invertido:** [Sesión de aprendizaje]
