@@ -1,128 +1,111 @@
-# 🚀 Curso Práctico de Node.js con Proyectos (De Novato a Pro)
+# 📌 Proyectos 7 y 8: API de Usuarios con MongoDB + Sistema de Autenticación JWT
 
-Este curso está diseñado para **aprender Node.js desde cero hasta nivel avanzado** mediante **proyectos prácticos**.  
-La ruta está dividida en niveles: Novato → Intermedio → Avanzado → Pro.  
+## 🎯 Objetivo
+Crear una API REST completa para gestión de usuarios con MongoDB y sistema de autenticación JWT.
 
----
+## 🚀 Proyectos Implementados
 
-## 🟢 Nivel 1 – Novato (Bases de Node.js)
-**Objetivo:** Entender qué es Node, cómo ejecutar código fuera del navegador y trabajar con la terminal.
+### ✅ Proyecto 7: API de Usuarios con MongoDB
+**Funcionalidades básicas:**
+- Registro de usuarios con encriptación de contraseñas
+- Login básico con verificación de contraseñas
+- Listado de usuarios
 
-### 📌 Proyecto 1: Hola Node y CLI
-- Script que recibe tu nombre y te saluda.
-- Aprendes: `node archivo.js`, `process.argv`.
+### ✅ Proyecto 8: Sistema de Autenticación JWT
+**Funcionalidades avanzadas:**
+- Login genera tokens JWT con expiración de 24h
+- Middleware de autenticación para rutas protegidas
+- Ruta de perfil personalizada
+- Headers Authorization con Bearer tokens
 
-### 📌 Proyecto 2: Gestor de Tareas en Consola
-- CRUD de tareas (agregar, listar, completar, eliminar).
-- Aprendes: módulos (`fs`, `module.exports`), persistencia en JSON, `npm init`.
+## 📁 Estructura del Proyecto
 
-### 📌 Proyecto 3: Mini Calculadora en Consola
-- Operaciones básicas (+, -, *, /).
-- Aprendes: funciones y argumentos en CLI.
+```
+├── Proyecto7-api-usuarios-mongodb/     # Versión básica
+│   ├── models/Usuarios.js
+│   ├── controllers/
+│   ├── routes/usuarios.js
+│   └── app.js
+│
+├── Proyecto8-sistema-autenticacion-jwt/  # Versión con JWT
+│   ├── models/Usuarios.js
+│   ├── controllers/
+│   │   ├── usuariosController.js
+│   │   ├── loginUsuario.js
+│   │   ├── obtenerUsuarios.js
+│   │   └── perfilUsuario.js
+│   ├── middleware/auth.js              # ← Nuevo
+│   ├── routes/usuarios.js
+│   └── app.js
+```
 
----
+## 🔗 Endpoints Disponibles
 
-## 🟡 Nivel 2 – Principiante Intermedio (Servidores y APIs)
-**Objetivo:** Crear y consumir servidores con Node.
+### Proyecto 7 (Básico)
+- `POST /api/usuarios` - Registrar usuario
+- `POST /api/usuarios/login` - Login básico
+- `GET /api/usuarios` - Obtener usuarios (público)
 
-### 📌 Proyecto 4: Servidor HTTP Básico
-- Usando el módulo `http`, responde “Hola Mundo” en el navegador.
-- Aprendes: ciclo request-response.
+### Proyecto 8 (Con JWT)
+- `POST /api/usuarios` - Registrar usuario (público)
+- `POST /api/usuarios/login` - Login con JWT (público)
+- `GET /api/usuarios` - Obtener usuarios (🔒 protegido)
+- `GET /api/usuarios/perfil` - Ver perfil personal (🔒 protegido)
 
-### 📌 Proyecto 5: API REST con Express
-- CRUD de tareas pero ahora vía API (endpoints).
-- Aprendes: `express`, middlewares, rutas.
+## 🛡️ Autenticación JWT
 
-### 📌 Proyecto 6: App del Clima
-- Introduces una ciudad y el programa consulta una API externa de clima.
-- Aprendes: `axios` o `fetch`, manejo de promesas y APIs externas.
+**Headers requeridos para rutas protegidas:**
+```
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
 
----
+## 🧪 Cómo Probar
 
-## 🟠 Nivel 3 – Intermedio (Base de Datos y Autenticación)
-**Objetivo:** Guardar y proteger datos reales.
+### 1. Ejecutar Proyecto 7
+```bash
+cd Proyecto7-api-usuarios-mongodb
+npm install
+node app.js
+```
 
-### ✅ Proyecto 7: API de Usuarios con MongoDB - COMPLETADO
-- **Implementado:** API REST completa con MongoDB
-- **Endpoints:** 
-  - `POST /api/usuarios` - Registrar usuario
-  - `POST /api/usuarios/login` - Iniciar sesión
-  - `GET /api/usuarios` - Obtener usuarios
-- **Tecnologías:** Express, Mongoose, bcryptjs
-- **Características:**
-  - Encriptación de contraseñas con bcrypt
-  - Validaciones con Mongoose
-  - Estructura MVC (Modelo-Vista-Controlador)
-  - Conexión a MongoDB local
-  - Manejo de errores async/await
-- **Aprendiste:** Modelos con Mongoose, middleware pre('save'), controladores, rutas, testing con Postman
+### 2. Ejecutar Proyecto 8
+```bash
+cd Proyecto8-sistema-autenticacion-jwt
+npm install
+node app.js
+```
 
-### ✅ Proyecto 8: Sistema de Autenticación JWT - COMPLETADO
-- **Implementado:** Sistema completo de autenticación con JWT
-- **Funcionalidades:**
-  - Login genera tokens JWT con expiración
-  - Middleware de autenticación para rutas protegidas
-  - Ruta de perfil personalizada
-  - Headers Authorization con Bearer tokens
-- **Tecnologías:** JWT, middleware personalizado, headers HTTP
-- **Rutas protegidas:** GET /usuarios, GET /usuarios/perfil
-- **Aprendiste:** Tokens JWT, middleware de autenticación, seguridad en APIs, headers Authorization
+### 3. Testing con Postman
+1. **Registrar usuario:** POST `/api/usuarios`
+2. **Login:** POST `/api/usuarios/login` → Obtener token
+3. **Usar token:** Agregar header `Authorization: Bearer [token]`
+4. **Probar rutas protegidas:** GET `/api/usuarios`, GET `/api/usuarios/perfil`
 
----
+## 🔧 Tecnologías Utilizadas
 
-## 🔴 Nivel 4 – Avanzado (Tiempo Real y Escalabilidad)
-**Objetivo:** Manejar conexiones persistentes y eventos en vivo.
+- **Express.js** - Framework web
+- **Mongoose** - ODM para MongoDB
+- **bcryptjs** - Encriptación de contraseñas
+- **jsonwebtoken** - Tokens JWT
+- **MongoDB** - Base de datos local
+- **Postman** - Testing de APIs
 
-### 📌 Proyecto 9: Chat en Tiempo Real con Socket.io
-- Usuarios chatean desde navegador.
-- Aprendes: WebSockets, eventos.
+## 📚 Conceptos Aprendidos
 
-### 📌 Proyecto 10: Notificaciones en Tiempo Real
-- Ejemplo: app que avisa cuando hay un nuevo pedido.
-- Aprendes: pub/sub, push notifications.
+### Proyecto 7
+- Modelos con Mongoose
+- Middleware pre('save') para encriptación
+- Controladores async/await
+- Estructura MVC
+- Manejo de errores
 
----
-
-## ⚫ Nivel 5 – Pro (Fullstack y Proyectos Grandes)
-**Objetivo:** Unir todo lo aprendido y crear proyectos completos.
-
-### 📌 Proyecto 11: Mini E-commerce (API + Frontend)
-- Funcionalidades: productos, usuarios, carrito, pedidos.
-- Backend en Node, frontend en React/Vue.
-- Aprendes: Node en producción + integración con frontend.
-
-### 📌 Proyecto 12: Clone de Trello / Notas Colaborativas
-- Varias personas editan y ven cambios en tiempo real.
-- Aprendes: Node + WebSockets + escalabilidad de apps grandes.
-
----
-
-## ✅ Conclusión
-- **Nivel 1 y 2 →** Dominas lo básico de Node y APIs.  
-- **Nivel 3 →** Manejas datos y seguridad.  
-- **Nivel 4 →** Controlas tiempo real.  
-- **Nivel 5 →** Creas proyectos como los que se hacen en empresas.  
-
-Este curso es **100% práctico**: cada proyecto te da una habilidad nueva.  
-Al terminar, tendrás un portafolio sólido de Node.js listo para mostrar.
-
----
-## 📈 Progreso Actual
-
-**Proyectos Completados:**
-- ✅ **Proyecto 7:** API de Usuarios con MongoDB (Octubre 2025)
-  - Estructura MVC implementada
-  - Autenticación básica con bcrypt
-  - Base de datos MongoDB local
-  - Testing con Postman
-
-- ✅ **Proyecto 8:** Sistema de Autenticación JWT (Octubre 2025)
-  - Tokens JWT con expiración
-  - Middleware de autenticación
-  - Rutas protegidas
-  - Headers Authorization
-
-**Próximo Proyecto:**
-- 🔄 **Proyecto 9:** Chat en Tiempo Real con Socket.io
+### Proyecto 8
+- Tokens JWT con expiración
+- Middleware de autenticación personalizado
+- Rutas protegidas
+- Headers Authorization
+- Seguridad en APIs REST
 
 ---
+
+**Fecha de implementación:** Octubre 2025
