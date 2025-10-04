@@ -42,9 +42,20 @@ La ruta está dividida en niveles: Novato → Intermedio → Avanzado → Pro.
 ## 🟠 Nivel 3 – Intermedio (Base de Datos y Autenticación)
 **Objetivo:** Guardar y proteger datos reales.
 
-### 📌 Proyecto 7: API de Usuarios con MongoDB o MySQL
-- Endpoints para registro, login y listar usuarios.
-- Aprendes: bases de datos + Node (`mongoose` o `sequelize`).
+### ✅ Proyecto 7: API de Usuarios con MongoDB - COMPLETADO
+- **Implementado:** API REST completa con MongoDB
+- **Endpoints:** 
+  - `POST /api/usuarios` - Registrar usuario
+  - `POST /api/usuarios/login` - Iniciar sesión
+  - `GET /api/usuarios` - Obtener usuarios
+- **Tecnologías:** Express, Mongoose, bcryptjs
+- **Características:**
+  - Encriptación de contraseñas con bcrypt
+  - Validaciones con Mongoose
+  - Estructura MVC (Modelo-Vista-Controlador)
+  - Conexión a MongoDB local
+  - Manejo de errores async/await
+- **Aprendiste:** Modelos con Mongoose, middleware pre('save'), controladores, rutas, testing con Postman
 
 ### 📌 Proyecto 8: Sistema de Autenticación JWT
 - Usuarios con login seguro, tokens y rutas protegidas.
@@ -87,5 +98,18 @@ La ruta está dividida en niveles: Novato → Intermedio → Avanzado → Pro.
 
 Este curso es **100% práctico**: cada proyecto te da una habilidad nueva.  
 Al terminar, tendrás un portafolio sólido de Node.js listo para mostrar.
+
+---
+## 📈 Progreso Actual
+
+**Proyectos Completados:**
+- ✅ **Proyecto 7:** API de Usuarios con MongoDB (Octubre 2025)
+  - Estructura MVC implementada
+  - Autenticación básica con bcrypt
+  - Base de datos MongoDB local
+  - Testing con Postman
+
+**Próximo Proyecto:**
+- 🔄 **Proyecto 8:** Sistema de Autenticación JWT
 
 ---
