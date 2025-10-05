@@ -68,24 +68,57 @@ La ruta está dividida en niveles: Novato → Intermedio → Avanzado → Pro.
 ## ⚫ Nivel 5 – Pro (Fullstack y Proyectos Grandes)
 **Objetivo:** Unir todo lo aprendido y crear proyectos completos.
 
-### 📌 Proyecto 11: Mini E-commerce (API + Frontend)
-- Funcionalidades: productos, usuarios, carrito, pedidos.
-- Backend en Node, frontend en React/Vue.
-- Aprendes: Node en producción + integración con frontend.
+### ✅ Proyecto 11: Mini E-commerce (API + Frontend) - **COMPLETADO**
+- ✅ **Backend:** API REST completa con Node.js y Express
+- ✅ **Base de datos:** MongoDB con modelos Usuario, Producto, Pedido
+- ✅ **Autenticación:** JWT con roles (admin/cliente)
+- ✅ **Frontend:** React con interfaz moderna tipo dashboard
+- ✅ **Funcionalidades:** Login, catálogo, carrito, checkout
+- ✅ **Diseño:** Tema oscuro, sidebar, responsive
+- ✅ **Tecnologías:** Node.js, Express, MongoDB, React, JWT, Axios
 
-### 📌 Proyecto 12: Clone de Trello / Notas Colaborativas
+### 📌 Proyecto 12: Clone de Trello / Notas Colaborativas - **EN PROGRESO**
 - Varias personas editan y ven cambios en tiempo real.
 - Aprendes: Node + WebSockets + escalabilidad de apps grandes.
 
 ---
 
+## 📊 Progreso Actual
+
+### ✅ **COMPLETADOS:**
+- **Niveles 1-4:** Fundamentos, APIs, Base de datos, Tiempo real
+- **Proyecto 11:** E-commerce fullstack profesional
+
+### 🚧 **EN PROGRESO:**
+- **Proyecto 12:** Clone de Trello con WebSockets
+
+### 🎯 **PRÓXIMO:**
+- Finalizar Proyecto 12 para completar el Nivel 5 Pro
+
 ## ✅ Conclusión
-- **Nivel 1 y 2 →** Dominas lo básico de Node y APIs.  
-- **Nivel 3 →** Manejas datos y seguridad.  
-- **Nivel 4 →** Controlas tiempo real.  
-- **Nivel 5 →** Creas proyectos como los que se hacen en empresas.  
+- **Nivel 1 y 2 →** ✅ Dominas lo básico de Node y APIs  
+- **Nivel 3 →** ✅ Manejas datos y seguridad  
+- **Nivel 4 →** ✅ Controlas tiempo real  
+- **Nivel 5 →** 🚧 Creando proyectos como los que se hacen en empresas  
 
 Este curso es **100% práctico**: cada proyecto te da una habilidad nueva.  
 Al terminar, tendrás un portafolio sólido de Node.js listo para mostrar.
+
+---
+
+## 🚀 Proyecto 11 - E-commerce Destacado
+
+**Tecnologías utilizadas:**
+- **Backend:** Node.js, Express, MongoDB, JWT
+- **Frontend:** React, Axios, Context API
+- **Características:** Autenticación, CRUD, Carrito, Checkout
+- **Diseño:** Interfaz moderna tipo dashboard
+
+**Funcionalidades implementadas:**
+- Sistema de usuarios con roles
+- Catálogo de productos con imágenes
+- Carrito de compras en tiempo real
+- Proceso de checkout completo
+- Interfaz responsive y moderna
 
 ---
