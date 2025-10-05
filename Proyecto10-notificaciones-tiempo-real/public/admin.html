@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administrador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Panel de Administrador</h1>
+        
+        <div class="notifications">
+            <h2>Notificaciones</h2>
+            <div id="notifications-list"></div>
+        </div>
+
+        <div class="create-order">
+            <h2>Crear nuevo pedido</h2>
+            <form id="order-form">
+                <input id="cliente-input" placeholder="Nombre del cliente">
+                <input id="producto-input" placeholder="Producto">
+                <button type="submit">Crear Pedido</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
